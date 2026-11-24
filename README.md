@@ -8,7 +8,7 @@ Course registration for the Department of Computer Science, built as a final yea
 
 ## Try it
 
-Every demo account uses the password `demo2026`. The sign-in page lists them, and one click fills the form.
+Every demo account uses the password `demo2026`. Type the matric number or email below into the sign-in form.
 
 | Account | Sign in with | What to try |
 |---|---|---|

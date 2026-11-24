@@ -75,69 +75,6 @@
   color: var(--brand-strong);
 }
 
-/* ---------- Sign-in demo accounts ---------- */
-
-.demo-logins {
-  margin-top: var(--space-6);
-  padding-top: var(--space-5);
-  border-top: 1px solid var(--line);
-}
-
-.demo-logins h2 {
-  font-size: var(--text-md);
-}
-
-.demo-logins > p {
-  margin-top: var(--space-1);
-  color: var(--ink-3);
-  font-size: var(--text-sm);
-}
-
-.demo-logins__list {
-  display: grid;
-  gap: var(--space-2);
-  margin-top: var(--space-3);
-}
-
-.demo-login {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 0 var(--space-3);
-  padding: var(--space-3) var(--space-4);
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-control);
-  text-align: left;
-  cursor: pointer;
-}
-
-.demo-login:hover {
-  border-color: var(--brand);
-}
-
-.demo-login__who {
-  color: var(--heading);
-  font-weight: 500;
-}
-
-.demo-login__role {
-  grid-row: 2;
-  color: var(--ink-3);
-  font-size: var(--text-sm);
-}
-
-.demo-login__user {
-  grid-row: 1 / 3;
-  grid-column: 2;
-  align-self: center;
-  color: var(--brand-strong);
-  font-size: var(--text-xs);
-}
-
-.portal .project-note {
-  margin-top: var(--space-5);
-}
-
 .demo-reset {
   display: inline-flex;
   align-items: center;
