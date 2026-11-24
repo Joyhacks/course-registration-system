@@ -8,7 +8,9 @@ export const SCHOOL = Object.freeze({
   address: 'P.O. Box 518, Km 12, Ondo Road, Akure, Ondo State',
   department: 'Department of Computer Science',
   faculty: 'School of Information and Communication Technology',
-  projectNote: 'Final year project, Department of Computer Science. Not an official BESTPOTECH system.',
+  presenter: 'Adaramodu Femi Daniel',
+  presenterMatric: 'BSP/CSC/ND/24/001',
+  projectNote: 'Final year project by Adaramodu Femi Daniel (BSP/CSC/ND/24/001), Department of Computer Science. Not an official BESTPOTECH system.',
 });
 
 export const LEVELS = Object.freeze(['ND I', 'ND II', 'HND I', 'HND II']);

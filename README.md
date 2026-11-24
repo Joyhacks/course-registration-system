@@ -2,6 +2,8 @@
 
 Course registration for the Department of Computer Science, built as a final year project for Best Solution Polytechnic, Akure. Students choose their courses for the semester and send them to their course adviser. The adviser checks them and approves them, or sends them back with a note. The approved course form prints on one A4 page.
 
+**Presented by:** Adaramodu Femi Daniel (BSP/CSC/ND/24/001), Department of Computer Science.
+
 **Live demo:** https://joyhacks.github.io/course-registration-system/
 
 ![Student overview after approval](docs/student.png)
@@ -12,16 +14,16 @@ Every demo account uses the password `demo2026`. Type the matric number or email
 
 | Account | Sign in with | What to try |
 |---|---|---|
-| Tobi Oyelaran, student, ND II | `BSP/CS/ND/25/014` | Register courses (one carryover is already in), submit, then print the form after approval |
+| Adaramodu Femi Daniel, student, ND II | `BSP/CSC/ND/24/001` | Register courses (one carryover is already in), submit, then print the form after approval |
 | Mrs. Bisi Ogunleye, course adviser, ND | `b.ogunleye@demo.school` | Approve or return the registrations waiting for you |
 | Mr. Segun Falade, course adviser, HND | `s.falade@demo.school` | Same, for HND I and HND II |
 | Dr. Kunle Ajayi, Head of Department | `hod.cs@demo.school` | See and review every level |
 
 A good walk-through takes two minutes:
 
-1. Sign in as Tobi. Add an elective and submit.
-2. Sign out and sign in as Mrs. Ogunleye. Open Tobi's registration, check the automatic checks, and approve it.
-3. Sign in as Tobi again and print the course form.
+1. Sign in as Femi. Add an elective and submit.
+2. Sign out and sign in as Mrs. Ogunleye. Open Femi's registration, check the automatic checks, and approve it.
+3. Sign in as Femi again and print the course form.
 
 **Reset demo data** at the bottom of the menu puts everything back to the start.
 
@@ -69,7 +71,7 @@ Kept in one file, [`js/lib/rules.js`](js/lib/rules.js), with no browser code, so
 - Nothing can be saved or submitted outside the registration window.
 - Once submitted, only the adviser can send it back. Once approved, it is locked.
 - Only an adviser for the student's level, or the HOD, can approve or return it. A return needs a note.
-- Each submitted form gets a reference like `CRF/CS/2627/1/0031`, kept if it is returned and resubmitted.
+- Each submitted form gets a reference like `CRF/CSC/2526/1/0031`, kept if it is returned and resubmitted.
 
 ## How the demo works
 

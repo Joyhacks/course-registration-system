@@ -12,7 +12,7 @@ if (signedIn) window.location.replace(home(signedIn));
 $('#school-address').replaceChildren(icon('mapPin', { size: 16 }), SCHOOL.address);
 
 const fields = [
-  buildField({ name: 'username', label: 'Matric number or email', autocomplete: 'username', help: 'For example BSP/CS/ND/25/014' }),
+  buildField({ name: 'username', label: 'Matric number or email', autocomplete: 'username', help: 'For example BSP/CSC/ND/24/001' }),
   buildField({ name: 'password', label: 'Password', type: 'password', autocomplete: 'current-password' }),
 ];
 fields[0].control.setAttribute('autocapitalize', 'characters');

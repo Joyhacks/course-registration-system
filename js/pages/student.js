@@ -16,7 +16,7 @@ const adviser = STAFF.find((member) => member.role === 'adviser' && member.level
 const open = windowState(term, today) === 'open';
 const daysLeft = daysBetween(today, term.closes);
 
-$('#page-title').textContent = `${greeting()}, ${firstName(user.name)}`;
+$('#page-title').textContent = `${greeting()}, ${user.preferredName || firstName(user.name)}`;
 $('#page-meta').textContent = `${user.level}, ${PROGRAMMES[user.level]}. ${term.session} session, first semester.`;
 
 const primary = canEdit(registration) && open

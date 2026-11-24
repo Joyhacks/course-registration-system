@@ -88,5 +88,5 @@ test('demo data follows the rules', () => {
 });
 
 test('form references are readable', () => {
-  assert.equal(makeRef(term, 7), 'CRF/CS/2627/1/0007');
+  assert.equal(makeRef(term, 7), 'CRF/CSC/2526/1/0007');
 });

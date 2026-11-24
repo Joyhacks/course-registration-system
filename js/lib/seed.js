@@ -5,19 +5,19 @@
 import { LEVELS, STAFF } from './catalogue.js';
 import { optionsFor, requiredCodes, totalUnits } from './rules.js';
 
-export const DATA_VERSION = 3;
+export const DATA_VERSION = 4;
 
 const FIRST = ['Adaeze', 'Ayomide', 'Chinedu', 'Damilola', 'Ebuka', 'Fatima', 'Funmilayo', 'Ibrahim', 'Ifeoluwa', 'Ikechukwu', 'Kehinde', 'Mariam', 'Nkechi', 'Oluwaseun', 'Opeyemi', 'Precious', 'Ridwan', 'Samuel', 'Temitope', 'Tunde', 'Uche', 'Victoria', 'Yusuf', 'Zainab', 'Bolaji', 'Chiamaka', 'David', 'Esther', 'Gbenga', 'Halima', 'Jide', 'Kemi', 'Lateef', 'Moses', 'Ngozi', 'Rotimi'];
 const LAST = ['Adebayo', 'Okonkwo', 'Bello', 'Eze', 'Ogundipe', 'Abubakar', 'Olaniyan', 'Nwosu', 'Akinola', 'Ibe', 'Salami', 'Okafor', 'Adewale', 'Musa', 'Ojo', 'Afolabi', 'Babatunde', 'Chukwu', 'Ilesanmi', 'Oyebanji', 'Ajibade', 'Fashola', 'Obi', 'Lawal', 'Ayodele', 'Komolafe', 'Oladipo', 'Uzor', 'Alabi', 'Olowe'];
 
-const MATRIC_PREFIX = { 'ND I': 'ND/26', 'ND II': 'ND/25', 'HND I': 'HND/26', 'HND II': 'HND/25' };
+const MATRIC_PREFIX = { 'ND I': 'ND/25', 'ND II': 'ND/24', 'HND I': 'HND/25', 'HND II': 'HND/24' };
 
 // Earlier failed courses a student might be carrying.
 const CARRY_POOL = { 'ND II': ['COM 113', 'COM 112', 'MTH 111'], 'HND II': ['COM 311', 'COM 315', 'STA 311'] };
 
-// The account the sign-in page offers first: ND II with one carryover
-// and nothing registered yet, so the whole journey can be shown.
-export const DEMO_STUDENT = 'BSP/CS/ND/25/014';
+// The presenter's own account: ND II with one carryover and nothing
+// registered yet, so the whole journey can be shown live.
+export const DEMO_STUDENT = 'BSP/CSC/ND/24/001';
 
 function random(seed) {
   let value = seed;
@@ -45,7 +45,7 @@ export function buildDemoData(now = new Date()) {
   const pick = (list) => list[Math.floor(rand() * list.length)];
 
   const term = {
-    session: '2026/2027',
+    session: '2025/2026',
     semester: 1,
     opens: isoDay(now, -16),
     closes: isoDay(now, 18),
@@ -66,7 +66,7 @@ export function buildDemoData(now = new Date()) {
       const pool = CARRY_POOL[level];
       const carryovers = pool && rand() < 0.3 ? [pick(pool)] : [];
       students.push({
-        matric: `BSP/CS/${MATRIC_PREFIX[level]}/${String(serial).padStart(3, '0')}`,
+        matric: `BSP/CSC/${MATRIC_PREFIX[level]}/${String(serial).padStart(3, '0')}`,
         name,
         level,
         mode: rand() < 0.8 ? 'Full-time' : 'Part-time',
@@ -75,9 +75,9 @@ export function buildDemoData(now = new Date()) {
     }
   }
 
-  // The demo student, placed in ND II.
+  // The presenter, placed in ND II. Surname first, as on school records.
   const demoIndex = students.findIndex((student) => student.level === 'ND II');
-  students[demoIndex] = { matric: DEMO_STUDENT, name: 'Tobi Oyelaran', level: 'ND II', mode: 'Full-time', carryovers: ['COM 113'] };
+  students[demoIndex] = { matric: DEMO_STUDENT, name: 'Adaramodu Femi Daniel', preferredName: 'Femi', level: 'ND II', mode: 'Full-time', carryovers: ['COM 113'] };
 
   const registrations = {};
   let refCounter = 0;
@@ -133,5 +133,5 @@ export function buildDemoData(now = new Date()) {
 
 export function makeRef(term, counter) {
   const years = term.session.replace(/^20(\d\d)\/20(\d\d)$/, '$1$2');
-  return `CRF/CS/${years}/${term.semester}/${String(counter).padStart(4, '0')}`;
+  return `CRF/CSC/${years}/${term.semester}/${String(counter).padStart(4, '0')}`;
 }
