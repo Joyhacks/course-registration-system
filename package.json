@@ -1,0 +1,12 @@
+{
+  "name": "course-registration-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Departmental course registration for a Nigerian polytechnic. Static site, demo data in the browser.",
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "test": "node --test tests/rules.test.js"
+  },
+  "license": "MIT"
+}

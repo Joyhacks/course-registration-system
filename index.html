@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'">
+  <meta name="description" content="Departmental course registration for the Department of Computer Science, Best Solution Polytechnic, Akure.">
+  <title>Sign in | Course Registration, Department of Computer Science</title>
+  <link rel="preload" href="fonts/roboto-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/montserrat-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="img/favicon-64.png" type="image/png">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/registration.css">
+  <script type="module" src="js/pages/signin.js"></script>
+</head>
+<body>
+  <div class="portal">
+    <aside class="portal__school" aria-label="School">
+      <img class="portal__crest" src="img/crest-256.png" alt="" width="120" height="120">
+      <div>
+        <p class="portal__name" translate="no">Best Solution Polytechnic, Akure</p>
+        <p class="portal__motto">Technology: Skill for Self Reliance</p>
+      </div>
+      <div class="portal__intro">
+        <strong>Departmental Course Registration</strong>
+        Department of Computer Science. Students choose their courses for the semester and submit them. Course advisers check and approve them, and the approved form is printed for the student's file.
+      </div>
+      <p class="portal__address" id="school-address"></p>
+    </aside>
+    <main class="portal__main" id="main">
+      <div class="portal__card">
+        <p class="eyebrow">2026/2027 session, first semester</p>
+        <h1>Sign in</h1>
+        <p class="portal__lead">Students sign in with their matriculation number. Staff use their school email.</p>
+        <div id="signin-form"></div>
+        <section class="demo-logins" aria-labelledby="demo-title">
+          <h2 id="demo-title">Demo accounts</h2>
+          <p>This is a demonstration. Every account uses the password <strong class="mono">demo2026</strong>. Pick one to fill the form.</p>
+          <div id="demo-list" class="demo-logins__list"></div>
+        </section>
+        <p class="project-note">Final year project, Department of Computer Science. Not an official BESTPOTECH system.</p>
+        <noscript><p>This system needs JavaScript. Turn it on in your browser settings and reload the page.</p></noscript>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
